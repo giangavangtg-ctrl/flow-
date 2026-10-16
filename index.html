@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Flex-flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* --- VÍ DỤ 1: row nowrap --- */
+        .container-1 {
+            display: flex;
+            /* Hướng từ trái qua phải, không xuống dòng */
+            flex-flow: row nowrap; 
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #ccc;
+        }
+
+        .container-1 > div {
+            background-color: #007bff; /* Màu xanh dương */
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* --- VÍ DỤ 2: row-reverse nowrap --- */
+        .container-2 {
+            display: flex;
+            /* Hướng từ phải qua trái, không xuống dòng */
+            flex-flow: row-reverse nowrap; 
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 2px solid #ccc;
+        }
+
+        .container-2 > div {
+            background-color: #28a745; /* Màu xanh lá */
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ví dụ 1: flex-flow: row nowrap; (Mặc định)</h2>
+    <p>Các phần tử xếp từ <b>Trái sang Phải</b> và không tự động xuống dòng.</p>
+    <div class="container-1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h2>Ví dụ 2: flex-flow: row-reverse nowrap;</h2>
+    <p>Các phần tử xếp từ <b>Phải sang Trái</b> và không tự động xuống dòng.</p>
+    <div class="container-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+</body>
+</html>
